@@ -108,31 +108,60 @@ header {
     }
   }
 }
-
-html {
-  color-scheme: dark;
+.value_customers {
+  background-image: url("/assets/images/value_customers_bg.png");
+  background-color: #ef3f23;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 80px;
+  padding-bottom: 144px;
+  position: relative;
+  h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px;
+    margin-bottom: 60px;
+  }
 }
 
 .scroller {
   overflow: hidden;
+  &.middle {
+    margin: 8px 0;
+  }
 }
 
 .scroller__inner {
-  padding-block: 1rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 8px;
+  .item {
+    background: #fff;
+    display: flex;
+    width: 185px;
+    height: 122px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    img {
+      max-height: 80px;
+      max-width: 100%;
+    }
+  }
 }
-
-
 
 .scroller[data-animated="true"] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
   animation: scroll var(--_animation-duration, 1s)
     var(--_animation-direction, forwards) linear infinite;
+  &.middle {
+    padding-left: calc(185px / 2);
+  }
 }
-
 
 .scroller[data-direction="left"] {
   --_animation-direction: forwards;
@@ -142,12 +171,14 @@ html {
   --_animation-duration: 30s;
 }
 
-
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } 
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
-
 
 .tag-list {
   margin: 0;
@@ -160,4 +191,40 @@ html {
   background: var(--clr-primary-400);
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("/assets/images/hero_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
+
+  .gallery {
+    --size: 95px;
+    display: grid;
+    gap: 5px;
+    column-gap: 55px;
+    grid-template-columns: repeat(4, calc(190px / 2));
+    grid-template-rows: repeat(10, 80px);
+
+    & img {
+      grid-column: 2 / span 2;
+      display: block;
+      width: 190px;
+      height: 160px;
+      overflow: hidden;
+      grid-column: span 2;
+      border-radius: 5px;
+      &:first-child {
+        display: none;
+      }
+      &:nth-child(3n - 1) {
+        grid-column: 2 / span 2;
+      }
+    }
+  }
 }

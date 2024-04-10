@@ -1,0 +1,110 @@
+$main-color: #ef3f23;
+$text-color: #111827;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Odibee+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans";
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 96px;
+    max-width: 1200px;
+    margin: 0 auto;
+    .top_page_logo {
+      width: 160px;
+      height: 48px;
+      img {
+        width: 100%;
+      }
+    }
+    .navbars {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      height: 100%;
+      li {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        img:last-child {
+          display: none;
+        }
+        span {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 26px;
+        }
+
+        &:hover {
+          &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 4px;
+            bottom: 0;
+            right: 0;
+            background-color: $main-color;
+            border-radius: 4px;
+          }
+          img.main {
+            display: none;
+          }
+          img:last-child {
+            display: block;
+          }
+          cursor: pointer;
+          color: $main-color;
+        }
+      }
+    }
+    .header_sevice {
+      display: flex;
+      align-items: center;
+      .contact_us_btn {
+        cursor: pointer;
+        color: $main-color;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 26px;
+        display: flex;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        border: 1px solid $main-color;
+        background: #fff;
+      }
+      .line {
+        display: block;
+        width: 1px;
+        height: 30px;
+        background-color: #dee0e9;
+        margin: 0 16px;
+      }
+      .lang_switch_btn {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

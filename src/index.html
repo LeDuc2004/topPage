@@ -10,8 +10,9 @@
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css">
   </head>
-
   <body>
     <header>
       <div class="container">
@@ -575,30 +576,48 @@
           knowledge, as well as dedication and attentiveness, we believe we are
           the ideal partner for all your needs.
         </p>
-        <ul>
+        <ul id="myOdometer">
           <li>
             <span>Our Customers</span>
-            <p>10+</p>
+            <div class="wrap_odometer">
+              <p id="our_customers">10</p>
+              <p>+</p>
+            </div>
           </li>
           <li>
             <span>Successfull Projects</span>
-            <p>10+</p>
+            <div class="wrap_odometer">
+              <p id="successfull_projects">10</p>
+              <p>+</p>
+            </div>
           </li>
           <li>
             <span>Offices</span>
-            <p>1+</p>
+            <div class="wrap_odometer">
+              <p id="offices">1</p>
+              <p>+</p>
+            </div>
           </li>
           <li>
             <span>ICT Vietnam Companies</span>
-            <p>TOP 1</p>
+            <div class="wrap_odometer">
+              <p>Top</p>
+              <p id="ict_vn">1</p>
+            </div>
           </li>
           <li>
             <span>Customer Satisfication</span>
-            <p>10%</p>
+            <div class="wrap_odometer">
+              <p id="customer_sati">10</p>
+              <p>%</p>
+            </div>
           </li>
           <li>
             <span>Customer Return Rate</span>
-            <p>10%</p>
+            <div class="wrap_odometer">
+              <p id="customer">10</p>
+              <p>%</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -2093,6 +2112,7 @@
     type="text/javascript"
     src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
   ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
   <script>
     const scrollers = document.querySelectorAll(".scroller");
 
@@ -2223,6 +2243,53 @@
       $("body").removeClass("modal_Open");
       $("#over_lay").removeClass("show");
       $(modalName).removeClass("show");
+    }
+
+    // Khởi tạo Odometer
+    const odometer1 = new Odometer({
+      el: document.querySelector("#our_customers"),
+      value: 10,
+    });
+    const odometer2 = new Odometer({
+      el: document.querySelector("#successfull_projects"),
+      value: 10,
+    });
+    const odometer3 = new Odometer({
+      el: document.querySelector("#offices"),
+      value: 1,
+    });
+    const odometer4 = new Odometer({
+      el: document.querySelector("#ict_vn"),
+      value: 1,
+    });
+    const odometer5 = new Odometer({
+      el: document.querySelector("#customer_sati"),
+      value: 10,
+    });
+    const odometer6 = new Odometer({
+      el: document.querySelector("#customer"),
+      value: 10,
+    });
+
+    window.addEventListener("scroll", function () {
+      var element = document.getElementById("myOdometer");
+      var position = element.getBoundingClientRect();
+      var windowHeight = window.innerHeight;
+
+      if (position.top < windowHeight * 0.8) {
+        activateOdometer();
+        window.removeEventListener("scroll", arguments.callee);
+      }
+    });
+
+    // Hàm kích hoạt odometer
+    function activateOdometer() {
+      odometer1.update(60);
+      odometer2.update(100);
+      odometer3.update(2);
+      odometer4.update(10);
+      odometer5.update(95);
+      odometer6.update(91);
     }
   </script>
 </html>

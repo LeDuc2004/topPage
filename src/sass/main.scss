@@ -871,12 +871,15 @@ video::-webkit-media-controls {
           font-weight: 500;
           line-height: 32px;
         }
-        p {
-          color: #ef3f23;
-          font-size: 48px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 68px;
+        .wrap_odometer {
+          display: flex;
+          p, span{
+            color: #ef3f23;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 68px;
+          }
         }
       }
     }

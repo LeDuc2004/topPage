@@ -1032,7 +1032,10 @@ video::-webkit-media-controls {
       }
       &:hover,
       &:active,
-      &:visited {
+      &:visited,
+      &:focus,
+      &:focus-within,
+      &:enabled {
         .over_lay {
           transition: all 0.4s linear;
 
@@ -4558,9 +4561,9 @@ footer {
     margin-right: 32px;
     margin-top: 50px;
     @include sp {
-      margin-top: 0;margin-right: 0;
+      margin-top: 0;
+      margin-right: 0;
     }
-    
   }
   .content {
     & > img {
@@ -4581,26 +4584,26 @@ footer {
       margin-bottom: 23px;
       @include sp {
         overflow: hidden;
-color: var(--Color-Text-color, #111827);
-text-align: justify;
-text-overflow: ellipsis;
+        color: var(--Color-Text-color, #111827);
+        text-align: justify;
+        text-overflow: ellipsis;
 
-/* Body/14/Medium */
-font-family: "Noto Sans";
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 22px; /* 157.143% */
-margin-top: 32px;
-display: -webkit-box;
--webkit-line-clamp: 13;
--webkit-box-orient: vertical;
-overflow: hidden;
-min-height: 58px;
-word-break: break-word;
-overflow: hidden;
-color: var(--Color-Text-color, #111827);
-text-overflow: ellipsis;
+        /* Body/14/Medium */
+        font-family: "Noto Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px; /* 157.143% */
+        margin-top: 32px;
+        display: -webkit-box;
+        -webkit-line-clamp: 13;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 58px;
+        word-break: break-word;
+        overflow: hidden;
+        color: var(--Color-Text-color, #111827);
+        text-overflow: ellipsis;
       }
     }
     .wrapper {

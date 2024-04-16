@@ -2050,6 +2050,10 @@
         }
       }
 
+      $(".blog").on("touchstart", function() {
+    $(this).addClass("hover_active");
+});
+
       function onShowPopup(modalName) {
         $("body").addClass("modal_Open");
         $("#over_lay").addClass("show");

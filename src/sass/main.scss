@@ -1030,12 +1030,8 @@ video::-webkit-media-controls {
         width: 320px;
         height: 450px;
       }
-      &:hover,
-      &:active,
-      &:visited,
-      &:focus,
-      &:focus-within,
-      &:enabled {
+ 
+      &.hover_active {
         .over_lay {
           transition: all 0.4s linear;
 

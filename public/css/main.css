@@ -1062,26 +1062,26 @@ video::-webkit-media-controls {
     height: 450px;
   }
 }
-.service_slution .blogs .blog:hover .over_lay, .service_slution .blogs .blog:active .over_lay, .service_slution .blogs .blog:visited .over_lay, .service_slution .blogs .blog:focus .over_lay, .service_slution .blogs .blog:focus-within .over_lay, .service_slution .blogs .blog:enabled .over_lay {
+.service_slution .blogs .blog.hover_active .over_lay {
   transition: all 0.4s linear;
   background: linear-gradient(180deg, black 20.35%, rgba(255, 255, 255, 0) 79.68%);
 }
-.service_slution .blogs .blog:hover .blog_bg, .service_slution .blogs .blog:active .blog_bg, .service_slution .blogs .blog:visited .blog_bg, .service_slution .blogs .blog:focus .blog_bg, .service_slution .blogs .blog:focus-within .blog_bg, .service_slution .blogs .blog:enabled .blog_bg {
+.service_slution .blogs .blog.hover_active .blog_bg {
   background-position-y: -130px;
   background-position-x: -70px;
   background-size: 145%;
   filter: blur(3px);
 }
-.service_slution .blogs .blog:hover .content, .service_slution .blogs .blog:active .content, .service_slution .blogs .blog:visited .content, .service_slution .blogs .blog:focus .content, .service_slution .blogs .blog:focus-within .content, .service_slution .blogs .blog:enabled .content {
+.service_slution .blogs .blog.hover_active .content {
   color: white;
 }
-.service_slution .blogs .blog:hover .content h2, .service_slution .blogs .blog:active .content h2, .service_slution .blogs .blog:visited .content h2, .service_slution .blogs .blog:focus .content h2, .service_slution .blogs .blog:focus-within .content h2, .service_slution .blogs .blog:enabled .content h2 {
+.service_slution .blogs .blog.hover_active .content h2 {
   color: white;
 }
-.service_slution .blogs .blog:hover .content ul li, .service_slution .blogs .blog:active .content ul li, .service_slution .blogs .blog:visited .content ul li, .service_slution .blogs .blog:focus .content ul li, .service_slution .blogs .blog:focus-within .content ul li, .service_slution .blogs .blog:enabled .content ul li {
+.service_slution .blogs .blog.hover_active .content ul li {
   color: white;
 }
-.service_slution .blogs .blog:hover .content ul li::after, .service_slution .blogs .blog:active .content ul li::after, .service_slution .blogs .blog:visited .content ul li::after, .service_slution .blogs .blog:focus .content ul li::after, .service_slution .blogs .blog:focus-within .content ul li::after, .service_slution .blogs .blog:enabled .content ul li::after {
+.service_slution .blogs .blog.hover_active .content ul li::after {
   background: white;
 }
 .service_slution .blogs .blog.first .blog_bg {
